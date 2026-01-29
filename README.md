@@ -1,12 +1,14 @@
 # USG: Personalized News Headline Generation via Multi-Agent User Simulation
 
+Personalized news headline generation is essential for user engagement but faces challenges due to data scarcity and factual inconsistency risks. Existing methods often rely on indirect preference modeling, which limits effectiveness. To address this, we introduce **USG**, a **Multi-Agent User Simulator** framework that generates high-quality personalized headlines. It leverages three interactive agents:
+- **User Agent**: Provides subjective feedback to guide personalization.
+- **Editor Agent**: Ensures factual correctness and adherence to editorial standards.
+- **Writer Agent**: Iteratively refines headlines using a Critique-and-Refine algorithm.
+
+The resulting high-fidelity dataset is then used to train a robust generator model.
 
 ## Dataset
-Please download the following dataset and place them in the `data` folder:
-
-- **PENS**: A News-based dataset containing personalized news headline.
-
-
+Please download the **PENS** dataset and place it in the `data` folder.
 
 ## Requirements
 - Python 3.12.7
@@ -14,38 +16,35 @@ Please download the following dataset and place them in the `data` folder:
 ```bash
 pip install -r requirements.txt
 ```
+
 ## Pipeline
 
 ### Step 1: Simulator Construction
-In the first step, we conduct 3 simulators for step 2. 
+Initialize and train the three simulators (User, Editor, Writer) to prepare for the synthesis stage.
 
 **Directory**: `Simulator_Construction`
 
-To conduct the simulators:
 ```bash
 cd Simulator_Construction
 sh run.sh
 ```
 
 ### Step 2: Personalized Headline Synthesis
-This step synthesizes personalized headline dataset.
+Synthesize the personalized headline dataset using the multi-agent simulation.
 
 **Directory**: `Stage1_Personalized_Headline_Synthesis`
 
-To synthesize personalized headline:
 ```bash
 cd Stage1_Personalized_Headline_Synthesis
 sh run.sh
 ```
 
 ### Step 3: Generator Tuning
-In the final step, we fine-tune a generator for generating personalized headlines.
+Fine-tune the generator model using the synthesized dataset to produce personalized headlines.
 
 **Directory**: `Stage2_Generator_Tuning`
 
-To tune generator:
 ```bash
 cd Stage2_Generator_Tuning
 sh run.sh
 ```
-

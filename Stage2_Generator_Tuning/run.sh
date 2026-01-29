@@ -1,1 +1,2 @@
-python gen_agent.py
+python distill_data.py
+python train.py
