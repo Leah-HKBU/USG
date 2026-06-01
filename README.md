@@ -12,7 +12,7 @@ The resulting high-fidelity synthetic dataset is then used to fine-tune a robust
 
 ## Dataset
 
-Download the **PENS** dataset and place the following files in the `data/` folder:
+Download the **PENS** dataset in the `data/` folder:
 
 ```
 data/

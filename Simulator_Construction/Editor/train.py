@@ -20,7 +20,7 @@ with open("data/headline.txt","r") as f, \
             continue
         for i in range(len(analysis)):
             cur_exp = analysis[i]
-            if i == 0 and cur_exp["Decision"] != "yes":
+            if i == 0 and cur_exp["Decision"] != "correct":
                 print(new_head)
                 print(cur_exp)
                 continue

@@ -6,10 +6,7 @@ This file provides:
   - GeneratorAgent: calls the fine-tuned model via vLLM at port 8002
   - run_inference: runs G_theta on the full test set
 
-Prompt format must match gen_personalized_headline.py exactly:
-  system      : SYSTEM constant
-  instruction : Generator prompt template (task + constraints + standards + memory + steps)
-  output      : {rationale}\n\nHeadline: {h*}
+
 """
 
 import os

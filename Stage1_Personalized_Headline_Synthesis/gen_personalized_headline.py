@@ -1,7 +1,7 @@
 """
 Step 2: Generate personalized headline fine-tuning data (One-to-Many).
 
-Source  : TrainSamples_2w.pkl  (pos + neg samples)
+Source  : TrainSamples.pkl  (pos + neg samples)
 Strategy: For each news ID, assign up to USERS_PER_NEWS=3 users
           (positive first, negative to supplement).
 
@@ -10,7 +10,7 @@ Each output record:
   instruction : u_prof + u_hist + article body
   output      : rationale r* + "Headline: h*"
 
-Run from submit_code/:
+Run:
     python Stage1_Personalized_Headline_Synthesis/gen_personalized_headline.py
 """
 
