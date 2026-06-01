@@ -1,4 +1,4 @@
-python==3.12.7
-transformers==4.49.0
-numpy==1.26.0
-pandas==2.2.3
+python==3.13.13
+transformers==4.57.3
+numpy==1.26.4
+pandas==2.3.3
