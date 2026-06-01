@@ -132,7 +132,7 @@ Supports **resume**: re-running skips already-saved (article, user) pairs.
 
 ### Step 3: Generator Tuning
 
-Fine-tune the generator $\mathcal{G}_{\theta}$ on $D_{syn}$ from Step 2, then run inference on the test set.
+Fine-tune the generator  𝒢_θ on $D_{syn}$ from Step 2, then run inference on the test set.
 
 **Directory**: `Stage2_Generator_Tuning/`
 
