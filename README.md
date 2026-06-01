@@ -58,7 +58,6 @@ sub_code/
 │       └── inference.py             # WriterAgent class (port 8000)
 ├── Stage1_Personalized_Headline_Synthesis/   # Step 2: synthesize D_syn
 │   ├── gen_personalized_headline.py # One-to-Many data generation (training)
-│   ├── test_multiagent.py           # multi-agent inference on test set
 │   └── run.sh
 └── Stage2_Generator_Tuning/         # Step 3: fine-tune and evaluate Generator
     ├── gen_agent.py                 # GeneratorAgent inference on test set
@@ -128,15 +127,6 @@ sh run.sh
 
 Supports **resume**: re-running skips already-saved (article, user) pairs.
 
-#### 2b. Evaluate on test set (multi-agent inference)
-
-`test_multiagent.py` runs the full Editor → User → Writer pipeline on `TestSamples.pkl`.
-
-```bash
-python Stage1_Personalized_Headline_Synthesis/test_multiagent.py
-# Output: Stage1_Personalized_Headline_Synthesis/data/pred_multiagent_editor_orig.txt
-#         Stage1_Personalized_Headline_Synthesis/data/pred_multiagent_editor_orig_trajectory.jsonl
-```
 
 ---
 
