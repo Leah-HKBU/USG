@@ -57,7 +57,7 @@ sub_code/
 │   └── Writer/
 │       └── inference.py             # WriterAgent class (port 8000)
 ├── Stage1_Personalized_Headline_Synthesis/   # Step 2: synthesize D_syn
-│   ├── gen_personalized_headline.py # One-to-Many data generation (training)
+│   ├── gen_personalized_headline.py # Sata synthesis
 │   └── run.sh
 └── Stage2_Generator_Tuning/         # Step 3: fine-tune and evaluate Generator
     ├── gen_agent.py                 # GeneratorAgent inference on test set
@@ -132,7 +132,7 @@ Supports **resume**: re-running skips already-saved (article, user) pairs.
 
 ### Step 3: Generator Tuning
 
-Fine-tune the generator $\mathcal{G}_\theta$ on $D_{syn}$ from Step 2, then run inference on the test set.
+Fine-tune the generator $\mathcal{G}_{\theta}$ on $D_{syn}$ from Step 2, then run inference on the test set.
 
 **Directory**: `Stage2_Generator_Tuning/`
 
